@@ -11855,6 +11855,10 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+.list-group-item-action:hover {
+  background-color: #fff3cd;
+}
+
 :root,
 [data-bs-theme=light] {
   --bs-blue: #0d6efd;

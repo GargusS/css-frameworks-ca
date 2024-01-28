@@ -6,6 +6,11 @@
 @import "../../node_modules/bootstrap/scss/bootstrap";
 
 // Then add additional custom code here
+.list-group-item-action {
+  &:hover {
+    background-color: #fff3cd; // Change to the desired hover background color
+  }
+}
 
 // Custom.scss
 // Option B: Include parts of Bootstrap
