@@ -1,6 +1,6 @@
 {
   "name": "css-frameworks-ca",
-  "version": "0.0.1",
+  "version": "0.0.5",
   "description": "A starting point for the CSS Frameworks CA project",
   "scripts": {
     "test": "echo \"We will learn more about testing in the Workflow course\" && exit 1",
