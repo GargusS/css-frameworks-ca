@@ -15,22 +15,26 @@
 
 <body class="bg-dark">
   <main>
-    <section class="vh-100">
+    <section class="vh-100 mt-4">
       <div class="container h-100">
         <div class="d-flex justify-content-center align-items-center h-100">
           <div class="border border-primary pt-2">
 
-            <div class="card-body text-white p-md-5 rounded-3 px-2">
-              <h1 class="display-2 text-center bg-primary p-4">
-                💻IT support
-              </h1>
-              <div class="row g-2">
-                <div class="d-none d-md-block col-md-9 col-lg-4">
-                  <img src="./assets/undraw_secure_login_pdn4.svg" class="my-4 col px-5 py-2 img-fluid"
-                    alt="login illustration">
+            <div class="card-body text-white">
+              <div class="row">
+                <div class="p-md-5 col-md-6 col-lg-4">
+                  <img src="./assets/support-call.svg" alt="login illustration">
+
+
+                  <h1 class="display-6">IT support</h1>
+                  <h5 class="font-monospace ">Before entering a ticket you must login</h5>
+
+
+
                 </div>
 
-                <form class="col row g-4 needs-validation px-5" novalidate>
+                <form class="col row g-4 needs-validation px-5 align-items-center" novalidate>
+
                   <div class="col-lg-3">
                     <label for="validationCustom01" class="form-label">First name</label>
                     <input type="text" class="form-control" id="validationCustom01" value="" required>
@@ -38,9 +42,10 @@
                       Please enter your name.
                     </div>
                     <div class="valid-feedback">
-                      Looks good!
+                      Nicely done!
                     </div>
                   </div>
+
                   <div class="col-lg-3">
                     <label for="validationCustom02" class="form-label">Last name</label>
                     <input type="text" class="form-control" id="validationCustom02" value="" required>
@@ -48,9 +53,10 @@
                       Please enter your last.
                     </div>
                     <div class="valid-feedback">
-                      Looks good!
+                      Excellent!
                     </div>
                   </div>
+
                   <div class="col-lg-3 col-sm-12">
                     <label for="validationEmail" class="form-label">Email</label>
                     <div class="input-group has-validation">
@@ -61,8 +67,12 @@
                       <div class="invalid-feedback">
                         Please enter a valid email.
                       </div>
+                      <div class="valid-feedback">
+                        Terrific!
+                      </div>
                     </div>
                   </div>
+
                   <div class="col-lg-3 col-sm-12">
                     <label for="validationCustomPassword" class="form-label">Password</label>
                     <div class="input-group has-validation">
@@ -70,10 +80,14 @@
                       <input type="password" minlength="8" class="form-control" id="validationCustomUsername"
                         aria-describedby="inputGroupPrepend" required>
                       <div class="invalid-feedback">
-                        Must be atleast 8 characthers.
+                        Must be 8 characthers.
+                      </div>
+                      <div class="valid-feedback">
+                        Fantastic!
                       </div>
                     </div>
                   </div>
+
                   <div class="col-sm-12">
                     <div class="form-check">
                       <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
@@ -85,6 +99,7 @@
                       </div>
                     </div>
                   </div>
+
                   <div class="col-sm-4 my-4">
                     <button class="btn btn-primary" href="./profile/index.html" type="submit">Submit form</button>
                   </div>
