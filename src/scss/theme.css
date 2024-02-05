@@ -1,4 +1,9 @@
 @charset "UTF-8";
+.logo {
+  width: 60px;
+  margin-right: 30px;
+}
+
 /* /src/scss/_variables.scss */
 /*!
  * Bootstrap  v5.3.2 (https://getbootstrap.com/)
