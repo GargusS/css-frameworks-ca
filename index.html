@@ -17,79 +17,83 @@
   <main>
     <section class="vh-100">
       <div class="container h-100">
-        <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="d-flex justify-content-center align-items-center h-100">
           <div class="border border-primary pt-2">
 
             <div class="bg-dark text-light card-body p-md-5 rounded-3">
               <h1 class="display-2 text-center bg-warning-subtle text-dark rounded-5 mx-4">
                 💻IT support
               </h1>
-              <div class="col-md-10 col-lg-6 col-xl-6">
-                <img src="./assets/undraw_secure_login_pdn4.svg" class="my-4 col px-5 py-2 img-fluid"
-                  alt="login illustration">
+              <div class="row justify-content-center align-items-center g-2">
+                <div class="col-md-10 col-lg-6 col-xl-6">
+                  <img src="./assets/undraw_secure_login_pdn4.svg" class="my-4 col px-5 py-2 img-fluid"
+                    alt="login illustration">
+                </div>
+
+                <form class="col row g-4 needs-validation px-5" novalidate>
+                  <div class="col-lg-3">
+                    <label for="validationCustom01" class="form-label">First name</label>
+                    <input type="text" class="form-control" id="validationCustom01" value="" required>
+                    <div class="invalid-feedback">
+                      Please enter your name.
+                    </div>
+                    <div class="valid-feedback">
+                      Looks good!
+                    </div>
+                  </div>
+                  <div class="col-lg-3">
+                    <label for="validationCustom02" class="form-label">Last name</label>
+                    <input type="text" class="form-control" id="validationCustom02" value="" required>
+                    <div class="invalid-feedback">
+                      Please enter your last.
+                    </div>
+                    <div class="valid-feedback">
+                      Looks good!
+                    </div>
+                  </div>
+                  <div class="col-lg-3 col-sm-12">
+                    <label for="validationEmail" class="form-label">Email</label>
+                    <div class="input-group has-validation">
+                      <span class="input-group-text" id="inputGroupPrepend">@</span>
+                      <input type="email" class="form-control" id="validationEmail"
+                        pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$" aria-describedby="inputGroupPrepend"
+                        required>
+                      <div class="invalid-feedback">
+                        Please enter a valid email.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-3 col-sm-12">
+                    <label for="validationCustomPassword" class="form-label">Password</label>
+                    <div class="input-group has-validation">
+                      <span class="input-group-text">🗝</span>
+                      <input type="password" minlength="8" class="form-control" id="validationCustomUsername"
+                        aria-describedby="inputGroupPrepend" required>
+                      <div class="invalid-feedback">
+                        Must be atleast 8 characthers.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-12">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                      <label class="form-check-label" for="invalidCheck">
+                        Agree to terms and conditions
+                      </label>
+                      <div class="invalid-feedback">
+                        You must agree before submitting.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-4 my-4">
+                    <button class="btn btn-primary" href="./profile/index.html" type="submit">Submit form</button>
+                  </div>
+                </form>
               </div>
-              <div class="px-5">
-                <h1 class="display-5 text-center text-lg-start">Start here ⬇</h1>
-              </div>
-              <form class="col row g-4 needs-validation px-5" novalidate>
-                <div class="col-lg-3">
-                  <label for="validationCustom01" class="form-label">First name</label>
-                  <input type="text" class="form-control" id="validationCustom01" value="" required>
-                  <div class="invalid-feedback">
-                    Please enter your name.
-                  </div>
-                  <div class="valid-feedback">
-                    Looks good!
-                  </div>
-                </div>
-                <div class="col-lg-3">
-                  <label for="validationCustom02" class="form-label">Last name</label>
-                  <input type="text" class="form-control" id="validationCustom02" value="" required>
-                  <div class="invalid-feedback">
-                    Please enter your last.
-                  </div>
-                  <div class="valid-feedback">
-                    Looks good!
-                  </div>
-                </div>
-                <div class="col-lg-3 col-sm-12">
-                  <label for="validationEmail" class="form-label">Email</label>
-                  <div class="input-group has-validation">
-                    <span class="input-group-text" id="inputGroupPrepend">@</span>
-                    <input type="email" class="form-control" id="validationEmail"
-                      pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$" aria-describedby="inputGroupPrepend"
-                      required>
-                    <div class="invalid-feedback">
-                      Please enter a valid email.
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-3 col-sm-12">
-                  <label for="validationCustomPassword" class="form-label">Password</label>
-                  <div class="input-group has-validation">
-                    <span class="input-group-text">🗝</span>
-                    <input type="password" minlength="8" class="form-control" id="validationCustomUsername"
-                      aria-describedby="inputGroupPrepend" required>
-                    <div class="invalid-feedback">
-                      Must be atleast 8 characthers.
-                    </div>
-                  </div>
-                </div>
-                <div class="col-sm-12">
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
-                    <label class="form-check-label" for="invalidCheck">
-                      Agree to terms and conditions
-                    </label>
-                    <div class="invalid-feedback">
-                      You must agree before submitting.
-                    </div>
-                  </div>
-                </div>
-                <div class="col-sm-4 my-4">
-                  <button class="btn btn-primary" href="./profile/index.html" type="submit">Submit form</button>
-                </div>
-              </form>
+
+
+
+
             </div>
 
           </div>
