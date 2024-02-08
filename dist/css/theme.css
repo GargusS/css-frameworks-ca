@@ -4,6 +4,11 @@
   margin-right: 30px;
 }
 
+.profile-pic {
+  width: 100px;
+  height: 100px;
+}
+
 /*!
  * Bootstrap  v5.3.2 (https://getbootstrap.com/)
  * Copyright 2011-2023 The Bootstrap Authors
@@ -4926,7 +4931,7 @@ textarea.form-control-lg {
 
 .list-group {
   --bs-list-group-color: var(--bs-body-color);
-  --bs-list-group-bg: var(--bs-body-bg);
+  --bs-list-group-bg: #d3d3d3;
   --bs-list-group-border-color: none;
   --bs-list-group-border-width: var(--bs-border-width);
   --bs-list-group-border-radius: var(--bs-border-radius);
@@ -4938,7 +4943,7 @@ textarea.form-control-lg {
   --bs-list-group-action-active-color: var(--bs-body-color);
   --bs-list-group-action-active-bg: var(--bs-secondary-bg);
   --bs-list-group-disabled-color: var(--bs-secondary-color);
-  --bs-list-group-disabled-bg: var(--bs-body-bg);
+  --bs-list-group-disabled-bg: #d3d3d3;
   --bs-list-group-active-color: #fff;
   --bs-list-group-active-bg: #60b15e;
   --bs-list-group-active-border-color: #60b15e;
