@@ -44,21 +44,23 @@
       </div>
       <div class="col col-lg-4 justify-content-between">
         <form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <input class="form-control me-2" type="search" placeholder="Search the feed..." aria-label="Search">
           <button class="btn btn-outline-success" type="submit">Search</button>
         </form>
+
       </div>
     </nav>
     <aside class="row">
-      <div class="col-md-12 col-lg-6">
-        <h1 class="display-6">Feed</h1>
-        <h4 class="display-6">Tickets raised is listed below</h4>
-        <h6>use search if you are looking for a specific ticket</h6>
+      <div class="col-md-12 col-lg-6 text">
+
+        <h1 class="display-1 my-5">IT support Feed</h1>
+
+
         <section>
-          <!-- Modal trigger button -->
           <button type="button" class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#modalId">
             New support ticket
           </button>
+          <!-- Modal trigger button -->
 
           <!-- Modal Body -->
           <!-- To close the modal by clicking outside the modalbox, delete the last endpoint:data-bs-backdrop and data-bs-keyboard -->
@@ -70,7 +72,8 @@
                   <h5 class="modal-title" id="modalTitleId">
                     New ticket
                   </h5>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  <button type="button" class="btn-close bg-primary" data-bs-dismiss="modal"
+                    aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
 
@@ -105,11 +108,10 @@
 
 
         </section>
-        <button class="btn btn-primary mt-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#Id2"
+        <button class="btn btn-primary mt-3 col-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#Id2"
           aria-controls="Id2">
           FAQ
         </button>
-
         <div class="offcanvas offcanvas-start bg-dark" data-bs-backdrop="static" tabindex="-1" id="Id2"
           aria-labelledby="staticBackdropLabel">
           <div class="offcanvas-header">
@@ -125,13 +127,14 @@
 
                 <ul class="list-unstyled">
                   <li class="h5 mb-4 text-info">Q: How do I raise a new ticket?<ol class="h6 text-primary">A: Click the
-                      "New support ticket" button above</ol>
+                      "New support ticket" button on the feed page.</ol>
                   </li>
 
                   <li class="h5 mb-4 text-info">Q: There is no user name, or user id in the registration form for new
                     support tickets, where do I input this?<ol class="h6 text-primary">A: The user info is automagically
-                      added to your ticket, the user name is the same as your username in your profile and is shown like
-                      this; <code> Reported by examplename </code> in your ticket</ol>
+                      added to your ticket, the user name is the same as your username in your profile and is shown as
+                      <code> Reported by example.name </code> in your ticket
+                    </ol>
                   </li>
 
                 </ul>
