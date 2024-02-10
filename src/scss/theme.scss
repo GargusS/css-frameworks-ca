@@ -19,7 +19,9 @@ $link-decoration: none;
 .profile-pic {
   width: 70%;
 }
-
+.list-group-item {
+  border-radius: 5px;
+}
 // Configuration
 
 @import "../../node_modules/bootstrap/scss/functions";

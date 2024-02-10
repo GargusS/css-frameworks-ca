@@ -12,7 +12,7 @@
   width: 70%;
 }
 
-.list-group-item {
+.list-group-item .card {
   border-radius: 5px;
 }
 
