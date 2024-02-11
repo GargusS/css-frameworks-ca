@@ -9,11 +9,11 @@ Welcome to IT support Portal for non-IT professionals
 
 ## About the Project
 
+Project to get our hands dirty with scss and Bootstrap
+
 ### Key Features:
 
-## Stack
-
----
+Nodejs, NPM & Bootstrap 5
 
 ## Run Locally
 
