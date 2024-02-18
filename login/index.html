@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>IT support login</title>
+  <link rel="shortcut icon" href="../assets/favicon.ico" type="image/x-icon">
+  <link href="../src/css/theme.css" rel="stylesheet">
+  <script defer src="../form-valid.js"></script>
+
+</head>
+
+<body class="bg-dark">
+  <main>
+    <section class="vh-100 mt-4">
+      <div class="container">
+        <div class="d-flex justify-content-center align-items-center h-100">
+          <div class="border rounded-2 border-primary pt-2">
+
+            <div class="card-body text-white">
+              <div class="row">
+                <div class="col-lg-4">
+
+                  <div class="text-center">
+                    <h1 class="font-monospace">IT support</h1>
+                    <h2 class="font-monospace">login</h2>
+                    <a href="../index.html"><img class="img-fluid login-logo" src="../assets/support-call.svg" alt="login illustration"></a>
+                    <h5 class="font-monospace px-4"><a href="../register/index.html">Register</a> or login here</h5>
+
+
+                  </div>
+
+
+
+                </div>
+
+                <form id="login-form" class="col row g-4 needs-validation px-5 align-items-center" novalidate>
+
+                  <div class="col-lg-3 col-sm-12">
+                    <label for="validationEmail" class="form-label">Email</label>
+                    <div class="input-group has-validation">
+                      <span class="input-group-text" id="inputGroupPrepend">@</span>
+                      <input type="email" class="form-control" id="validationEmail"
+                        pattern="^[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,6}$"
+                        aria-describedby="inputGroupPrepend" required>
+                      <div class="invalid-feedback">
+                        Please enter a valid email.
+                      </div>
+                      <div class="valid-feedback">
+                        Terrific!
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-lg-3 col-sm-12">
+                    <label for="validationCustomPassword" class="form-label">Password</label>
+                    <div class="input-group has-validation">
+                      <span class="input-group-text">🗝</span>
+                      <input type="password" minlength="8" class="form-control" id="validationCustomUsername"
+                        aria-describedby="inputGroupPrepend" required>
+                      <div class="invalid-feedback">
+                        Must be 8 characters.
+                      </div>
+                      <div class="valid-feedback">
+                        Fantastic!
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-12">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                      <label class="form-check-label" for="invalidCheck">
+                        I agree to behave, and not to use foul language
+                      </label>
+                      <div class="invalid-feedback">
+                        You must agree before submitting.
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-4 my-4">
+                    <button class="btn btn-primary fw-bold" href="./profile/index.html" type="submit">Enter</button>
+                  </div>
+                </form>
+              </div>
+
+
+
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+</body>
+
+</html>
