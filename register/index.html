@@ -8,6 +8,8 @@
   <link rel="shortcut icon" href="../assets/favicon.ico" type="image/x-icon">
   <link href="../src/css/theme.css" rel="stylesheet">
   <script defer src="./form-valid.js"></script>
+  <script defer type="module" src="./index.mjs"></script>
+
 
   <title>IT support register page</title>
 
@@ -26,7 +28,8 @@
 
                   <div class="text-center">
                     <h1 class="font-monospace">IT support</h1>
-                    <a href="../index.html"><img class="img-fluid login-logo" src="../assets/support-call.svg" alt="login illustration"></a>
+                    <a href="../index.html"><img class="img-fluid login-logo" src="../assets/support-call.svg"
+                        alt="login illustration"></a>
                     <h5 class="font-monospace px-4">Register here or <a href="../login/index.html">log in</a></h5>
 
                   </div>
@@ -39,7 +42,7 @@
 
                   <div class="col-lg-3">
                     <label for="validationCustom01" class="form-label">First name</label>
-                    <input type="text" class="form-control" id="validationCustom01" value="" required>
+                    <input type="text" class="form-control" id="validationCustom01" value="tester" required>
                     <div class="invalid-feedback">
                       Please enter your name.
                     </div>
@@ -50,7 +53,7 @@
 
                   <div class="col-lg-3">
                     <label for="validationCustom02" class="form-label">Last name</label>
-                    <input type="text" class="form-control" id="validationCustom02" value="" required>
+                    <input type="text" class="form-control" id="validationCustom02" value="tester987" required>
                     <div class="invalid-feedback">
                       Please enter your last.
                     </div>
@@ -65,7 +68,7 @@
                       <span class="input-group-text" id="inputGroupPrepend">@</span>
                       <input type="email" class="form-control" id="validationEmail"
                         pattern="^[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,6}$"
-                        aria-describedby="inputGroupPrepend" required>
+                        aria-describedby="inputGroupPrepend" value="tester987@stud.noroff.no" required>
                       <div class="invalid-feedback">
                         Please enter a valid email.
                       </div>
@@ -80,7 +83,7 @@
                     <div class="input-group has-validation">
                       <span class="input-group-text">🗝</span>
                       <input type="password" minlength="8" class="form-control" id="validationCustomUsername"
-                        aria-describedby="inputGroupPrepend" required>
+                        aria-describedby="inputGroupPrepend" value="password987" required>
                       <div class="invalid-feedback">
                         Must be 8 characters.
                       </div>
@@ -103,7 +106,7 @@
                   </div>
 
                   <div class="col-sm-4 my-4">
-                    <button class="btn btn-primary fw-bold" href="./profile/index.html" type="submit">Enter</button>
+                    <button class="btn btn-primary fw-bold" href="./profile/index.html" type="submit">Register</button>
                   </div>
                 </form>
               </div>

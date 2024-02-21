@@ -7,7 +7,8 @@
   <title>IT support login</title>
   <link rel="shortcut icon" href="../assets/favicon.ico" type="image/x-icon">
   <link href="../src/css/theme.css" rel="stylesheet">
-  <script defer src="../form-valid.js"></script>
+  <script defer src="../register/form-valid.js"></script>
+  <script type="module" src="./index.js"></script>
 
 </head>
 
@@ -25,7 +26,8 @@
                   <div class="text-center">
                     <h1 class="font-monospace">IT support</h1>
                     <h2 class="font-monospace">login</h2>
-                    <a href="../index.html"><img class="img-fluid login-logo" src="../assets/support-call.svg" alt="login illustration"></a>
+                    <a href="../index.html"><img class="img-fluid login-logo" src="../assets/support-call.svg"
+                        alt="login illustration"></a>
                     <h5 class="font-monospace px-4"><a href="../register/index.html">Register</a> or login here</h5>
 
 
@@ -43,7 +45,7 @@
                       <span class="input-group-text" id="inputGroupPrepend">@</span>
                       <input type="email" class="form-control" id="validationEmail"
                         pattern="^[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,6}$"
-                        aria-describedby="inputGroupPrepend" required>
+                        aria-describedby="inputGroupPrepend" value="tester654@stud.noroff.no" required>
                       <div class="invalid-feedback">
                         Please enter a valid email.
                       </div>
@@ -58,7 +60,7 @@
                     <div class="input-group has-validation">
                       <span class="input-group-text">🗝</span>
                       <input type="password" minlength="8" class="form-control" id="validationCustomUsername"
-                        aria-describedby="inputGroupPrepend" required>
+                        aria-describedby="inputGroupPrepend" value="password654" required>
                       <div class="invalid-feedback">
                         Must be 8 characters.
                       </div>
@@ -81,7 +83,7 @@
                   </div>
 
                   <div class="col-sm-4 my-4">
-                    <button class="btn btn-primary fw-bold" href="./profile/index.html" type="submit">Enter</button>
+                    <button class="btn btn-primary fw-bold" type="submit">Enter</button>
                   </div>
                 </form>
               </div>
