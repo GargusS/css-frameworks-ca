@@ -14,9 +14,6 @@
         if (!form.checkValidity()) {
           event.preventDefault();
           event.stopPropagation();
-        } else {
-          // If form is valid, open index.html in a new tab
-          window.open("../profile/index.html", "_blank");
         }
 
         // Add validation class
