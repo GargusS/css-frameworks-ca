@@ -16,6 +16,4 @@ loginForm.addEventListener("submit", (event) => {
   const username = parts[0];
   // Store the username in local storage
   localStorage.setItem("userName", username);
-
 });
-
