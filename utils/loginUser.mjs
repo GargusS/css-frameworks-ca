@@ -15,6 +15,15 @@ export async function loginUser(email, password) {
   const { accessToken } = data;
   if (accessToken) {
     addAuthToken(accessToken);
+    // If login is successful, retrieve the email from the login form
+    // then,
+    // Split the email address by the "@" symbol
+    const parts = email.split("@");
+    // Extract the username part (before the "@")
+    const username = parts[0];
+    // Store the username in local storage
+    localStorage.setItem("userName", username);
+    // Wait 2seconds, then redirect to profile page
     setTimeout(() => {
       window.location.href = "../profile/";
     }, 2000);

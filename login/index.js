@@ -8,3 +8,4 @@ loginForm.addEventListener("submit", (event) => {
   const password = event.target[1].value;
   loginUser(email, password);
 });
+
