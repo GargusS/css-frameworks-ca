@@ -23,10 +23,6 @@ export async function loginUser(email, password) {
     const username = parts[0];
     // Store the username in local storage
     localStorage.setItem("userName", username);
-    // Wait 2seconds, then redirect to profile page
-    setTimeout(() => {
-      window.location.href = "../profile/";
-    }, 2000);
   } else {
     throw new error("No access token provided");
   }

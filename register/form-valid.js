@@ -14,10 +14,20 @@
         if (!form.checkValidity()) {
           event.preventDefault();
           event.stopPropagation();
+        } else {
+          // If the form is valid, perform additional checks here if needed
+          const invalidCheck = form.querySelector("#invalidCheck");
+          if (invalidCheck && !invalidCheck.checked) {
+            event.preventDefault();
+            alert("Please agree to the forums conditions.");
+          }
         }
-
         // Add validation class
         form.classList.add("was-validated");
+        // If additional checks passed and form is valid, redirect after 2 seconds
+        setTimeout(() => {
+          window.location.href = "../profile/";
+        }, 2000);
       },
       false
     );
