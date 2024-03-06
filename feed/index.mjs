@@ -54,6 +54,7 @@ async function getPosts(apiKey) {
     const response = await fetch(`${POSTS_URL}`, options);
     const posts = await response.json();
     // Display the posts
+
     console.log(posts);
   } catch (error) {
     console.error("Error fetching posts:", error.message);
