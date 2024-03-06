@@ -1,5 +1,5 @@
 import { API_KEY_URL, POSTS_URL } from "../shared/constants.mjs";
-import { doFetch } from "../utils/doFetch.mjs";
+//import { doFetch } from "../utils/doFetch.mjs";
 
 // Get accessToken from LocalStorage
 const accessToken = localStorage.getItem("accessToken");
@@ -49,13 +49,51 @@ async function getPosts(apiKey) {
         "X-Noroff-API-Key": apiKey,
       },
     };
-
+    // Grab the main container for posts
+    const feedContainer = document.getElementById("feedContainer");
     // Fetch posts using the constructed options
     const response = await fetch(`${POSTS_URL}`, options);
     const posts = await response.json();
+    //console.dir(posts.data);
     // Display the posts
+    posts.data.forEach((post) => {
+      // Destructure properties from each post object
+      const { id, title, body, updated, tags } = post;
 
-    console.log(posts);
+      // Create main anchor tag
+      const issueAnchor = document.createElement("a");
+      issueAnchor.classList.add("list-group-item", "list-group-item-action");
+
+      // Create main issue container
+      const issueDiv = document.createElement("div");
+      issueDiv.classList.add("d-flex", "justify-content-between");
+
+      // Create issue title
+      const issueTitle = document.createElement("h5");
+      issueTitle.classList.add("mb-1");
+      issueTitle.textContent = title;
+
+      // Format timestamp
+      const timestamp = updated;
+      const date = new Date(timestamp);
+
+      // Format the date
+      const formattedDate = `${date.toLocaleDateString()} ${date.toLocaleTimeString()}`;
+
+      // Create issue last updated timestamp
+      const issueTime = document.createElement("small");
+      issueTime.classList.add("mb-1");
+      issueTime.textContent = formattedDate;
+
+      // Create issue body
+      const issueBody = document.createElement("p");
+      issueBody.classList.add("mb-1");
+      issueBody.textContent = body;
+
+      issueAnchor.append(issueDiv, issueBody);
+      feedContainer.appendChild(issueAnchor);
+      issueDiv.append(issueTitle, issueTime);
+    });
   } catch (error) {
     console.error("Error fetching posts:", error.message);
     throw error;
