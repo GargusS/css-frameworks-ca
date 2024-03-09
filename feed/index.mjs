@@ -1,8 +1,8 @@
 import { API_KEY_URL, POSTS_URL } from "../shared/constants.mjs";
-//import { doFetch } from "../utils/doFetch.mjs";
 
 // Get accessToken from LocalStorage
 const accessToken = localStorage.getItem("accessToken");
+let apiKey; // Define apiKey variable
 
 async function postDataWithAuth(url, accessToken, bodyData) {
   try {
@@ -20,6 +20,7 @@ async function postDataWithAuth(url, accessToken, bodyData) {
     }
 
     const data = await response.json();
+    apiKey = data.data.key; // Assign the apiKey value
     return data;
   } catch (error) {
     console.error("Error fetching data:", error.message);
@@ -28,11 +29,11 @@ async function postDataWithAuth(url, accessToken, bodyData) {
 }
 
 const postData = { key: "value" };
+
 // Call postDataWithAuth to get the API key
 postDataWithAuth(API_KEY_URL, accessToken, postData)
   .then((data) => {
-    const apiKey = data.data.key; // Extract the apiKey from object
-
+    apiKey = data.data.key; // Extract the apiKey from object
     // Call getPosts with the API key
     getPosts(apiKey);
   })
@@ -54,12 +55,10 @@ async function getPosts(apiKey) {
     // Fetch posts using the constructed options
     const response = await fetch(`${POSTS_URL}`, options);
     const posts = await response.json();
-    //console.dir(posts.data);
     // Display the posts
     posts.data.forEach((post) => {
       // Destructure properties from each post object
-      const { id, title, body, updated, tags } = post;
-
+      const { title, body, updated } = post;
       // Create main anchor tag
       const issueAnchor = document.createElement("a");
       issueAnchor.classList.add("list-group-item", "list-group-item-action");
@@ -83,7 +82,7 @@ async function getPosts(apiKey) {
       // Create issue last updated timestamp
       const issueTime = document.createElement("small");
       issueTime.classList.add("mb-1");
-      issueTime.textContent = formattedDate;
+      issueTime.textContent = "Created " + formattedDate;
 
       // Create issue body
       const issueBody = document.createElement("p");
@@ -99,3 +98,5 @@ async function getPosts(apiKey) {
     throw error;
   }
 }
+
+export { apiKey };
