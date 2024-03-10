@@ -1,12 +1,12 @@
 // Importing the POSTS_URL constant from constants.mjs
 import { POSTS_URL } from "../shared/constants.mjs";
-import { apiKey } from "./index.mjs";
+import { apiKey } from "../feed/index.mjs";
 
 // Get accessToken from LocalStorage
 const accessToken = localStorage.getItem("accessToken");
 
 // Define a function to handle the form submission
-function saveTicket() {
+export function saveTicket() {
   // Get form data
   var title = document.getElementById("title").value;
   var issueDescription = document.getElementById("issueDescription").value;
@@ -33,11 +33,10 @@ function saveTicket() {
         // Handle success
         console.log("Ticket saved successfully!");
         // Close the modal or perform any other actions
-        var myModal = new bootstrap.Modal(document.getElementById("newTicketForm"));
+        let myModal = new bootstrap.Modal(document.getElementById("newTicketForm"));
         myModal.hide();
       } else {
         // Handle errors
-        console.log(apiKey);
         console.error("Failed to save ticket:", response.statusText);
       }
     })
@@ -45,4 +44,13 @@ function saveTicket() {
       console.error("Error saving ticket:", error);
     });
 }
-document.querySelector(".saveBtn").addEventListener("click", saveTicket);
+
+
+
+// Get the form save btn and attach a event listener to it so it can post the form
+document.addEventListener("DOMContentLoaded", function() {
+  const saveTicketBtn = document.getElementById("saveTicketBtn");
+  if (saveTicketBtn && window.location.pathname === "/feed") {
+      saveTicketBtn.addEventListener("click", saveTicket);
+  }
+});

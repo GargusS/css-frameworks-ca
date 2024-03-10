@@ -10,7 +10,7 @@
   <link rel="shortcut icon" href="../assets/favicon.ico" type="image/x-icon">
   <script defer src="https://kit.fontawesome.com/7eff3c9fb7.js" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-  <script defer src="./index.js"></script>
+  <script src="./index.mjs" type="module"></script>
   <link href="../src/css/theme.css" rel="stylesheet">
 </head>
 
@@ -33,8 +33,7 @@
             </a>
             <ul class="dropdown-menu dropdown-menu-dark border border-primary">
               <li><a class="dropdown-item" href="../feed/index.html">Go to feed</a></li>
-              <li><a class="dropdown-item disabled" href="#">New ticket <small class="text-warning">coming
-                    soon</small></a></li>
+              <li><a class="dropdown-item" id="logoutButton" href="#">Log out</a></li>
               <li><a class="dropdown-item disabled" href="#">My ticket(s) <small class="text-warning">coming
                     soon</small></a></li>
             </ul>
@@ -85,38 +84,8 @@
           <h4 class="m-3">Recent posts in feed</h4>
 
 
-          <div class="list-group text-light gap-2">
-            <a href="#" class="list-group-item list-group-item-action ">
-              <div class="d-flex justify-content-between ">
-                <h5>Database Connection Error</h5>
-                <small>Reported by @naceswan</small>
-              </div>
-              <p class="mt-1">Unable to establish a connection to the company database.
-                Troubleshoot the
-                issue
-                immediately.
-              </p>
-            </a>
-
-            <a href="#" class="list-group-item list-group-item-action">
-              <div class="d-flex justify-content-between">
-                <h5>File Server Unreachable</h5>
-                <small>Reported by @naceswan</small>
-              </div>
-              <p class="mb-1">Unable to access files stored on the company file server. Investigate and fix the
-                connectivity
-                issue.</p>
-            </a>
-
-            <a href="#" class="list-group-item list-group-item-action">
-              <div class="d-flex justify-content-between">
-                <h5 class="mb-1">Backup System Failure</h5>
-                <small>Reported by @naceswan</small>
-              </div>
-              <p class="mb-1">Backup system has failed, risking loss of critical data. Restore backup system
-                functionality
-                urgently.</p>
-            </a>
+          <div class="list-group text-light gap-2" id="profilePosts">
+            
 
           </div>
         </div>

@@ -10,7 +10,6 @@
   <link href="../src/css/theme.css" rel="stylesheet">
   <script src="./index.mjs" defer type="module"></script>
   <script src="./modal.js" defer></script>
-  <script src="./createPost.js" defer type="module"></script>
 
   <title>IT support feed</title>
 
@@ -38,8 +37,7 @@
               </a>
               <ul class="dropdown-menu dropdown-menu-dark border border-primary mb-3">
                 <li><a class="dropdown-item" href="../profile/">My profile</a></li>
-                <li><a class="dropdown-item disabled" href="#">New ticket <small class="text-warning">coming
-                      soon</small></a></li>
+                <li><a class="dropdown-item" id="logoutButton" href="#">Log out</a></li>
                 <li><a class="dropdown-item disabled" href="#">My ticket(s) <small class="text-warning">coming
                       soon</small></a></li>
               </ul>
@@ -96,7 +94,7 @@
                 <!-- Modal Footer -->
                 <div class="modal-footer">
                   <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Abort</button>
-                  <button type="button" class="saveBtn btn btn-primary">Save</button>
+                  <button type="button" id="saveTicketBtn" class="btn btn-primary">Save</button>
                 </div>
               </div>
             </div>
