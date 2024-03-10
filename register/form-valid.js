@@ -33,6 +33,3 @@
     );
   });
 })();
-
-
-console.log("Linked Correct");
